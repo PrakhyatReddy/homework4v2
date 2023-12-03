@@ -12,6 +12,7 @@ if (isset($_POST['actionType'])){
     break;
   }
 }
+
 $todolist = selectTodolist();
 include "view-todolist.php";
 include "view-footer.php";
