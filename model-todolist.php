@@ -31,7 +31,7 @@ function updateTodolist($tdln, $tdlp, $tdld, $tdls, $tdli) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("update `ToDoList` set `TaskName`=?, `Priority`=?, `DueDate`=?, `Status`=? where TaskID = ?");
-        $stmt->bind_param("ssssi", $tdln, $tdlp, $tdld, $tdls, $tdli);
+        $stmt->bind_param("sssss", $tdln, $tdlp, $tdld, $tdls, $tdli);
         $success = $stmt->execute();
         $conn->close();
         return $success;
