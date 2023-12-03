@@ -6,7 +6,7 @@ $pageTitle = "todolist";
 include "view-header.php";
 
 if (isset($_POST['actionType'])){
-  switch ($_POST['actionType'])){
+  switch ($_POST['actionType']){
     case "Add":
     insertTodolist($_POST['TaskName'], $_POST['Priority'], $_POST['DueDate'], $_POST['Status']);
     break;
