@@ -29,7 +29,7 @@
           <a class="nav-link" href="dailyreminders.php">Daily Reminders</a>
         </li>
                 <li class="nav-item">
-          <a class="nav-link" href="assignmentracker.php">Assignment Tracker</a>
+          <a class="nav-link" href="assignmenttracker.php">Assignment Tracker</a>
         </li>
       </ul>
     </div>
