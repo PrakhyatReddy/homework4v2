@@ -2,7 +2,7 @@
 function selectTodolist() {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("");
+        $stmt = $conn->prepare("SELECT * FROM 'ToDoList'");
         $stmt->execute();
         $result = $stmt->get_result();
         $conn->close();
