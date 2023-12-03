@@ -16,8 +16,8 @@ if (isset($_POST['actionType'])){
     break;
 
     case "Edit":
-    if (editTodolist($_POST['TaskName'], $_POST['Priority'], $_POST['DueDate'], $_POST['Status'])){
-      echo '<div class="alert alert-success" role="alert"> Task Added! </div>';
+    if (updateTodolist($_POST['TaskName'], $_POST['Priority'], $_POST['DueDate'], $_POST['Status'], $_POST['TaskID'])){
+      echo '<div class="alert alert-success" role="alert"> Task Edited! </div>';
     } else {
       echo '<div class="alert alert-danger" role="alert"> Error! </div>';
     }
