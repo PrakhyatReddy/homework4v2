@@ -15,6 +15,14 @@ if (isset($_POST['actionType'])){
     }
     break;
 
+    case "Edit":
+    if (editTodolist($_POST['TaskName'], $_POST['Priority'], $_POST['DueDate'], $_POST['Status'])){
+      echo '<div class="alert alert-success" role="alert"> Task Added! </div>';
+    } else {
+      echo '<div class="alert alert-danger" role="alert"> Error! </div>';
+    }
+    break;
+
     case "Delete":
     if (deleteTodolist($_POST['tdli'])){
       echo '<div class="alert alert-success" role="alert"> Task Deleted! </div>';
@@ -22,6 +30,7 @@ if (isset($_POST['actionType'])){
       echo '<div class="alert alert-danger" role="alert"> Error! </div>';
     }
     break;
+    
   }
 }
 
