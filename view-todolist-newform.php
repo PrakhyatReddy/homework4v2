@@ -34,6 +34,7 @@
       <input type="text" class="form-control" id="Status" name="Status">
     </div>
 
+    <input type="hidden" name="actionType" value="Add">
     <button type="submit" class="btn btn-primary">Save</button>
 </form>
         
