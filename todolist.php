@@ -8,7 +8,11 @@ include "view-header.php";
 if (isset($_POST['actionType'])){
   switch ($_POST['actionType']){
     case "Add":
-    insertTodolist($_POST['TaskName'], $_POST['Priority'], $_POST['DueDate'], $_POST['Status']);
+    if (insertTodolist($_POST['TaskName'], $_POST['Priority'], $_POST['DueDate'], $_POST['Status'])){
+      echo '<div class="alert alert-success" role="alert"> Task Added! </div>';
+    } else {
+      echo '<div class="alert alert-danger" role="alert"> Error! </div>';
+    }
     break;
   }
 }
