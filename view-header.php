@@ -20,16 +20,16 @@
           <a class="nav-link active" aria-current="page" href="/">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="ToDoList.php">To Do List</a>
+          <a class="nav-link" href="todolist.php">To Do List</a>
         </li>
                 <li class="nav-item">
-          <a class="nav-link" href="ShoppingList.php">Shopping List</a>
+          <a class="nav-link" href="shoppinglist.php">Shopping List</a>
         </li>
                 <li class="nav-item">
-          <a class="nav-link" href="DailyReminders.php">Daily Reminders</a>
+          <a class="nav-link" href="dailyreminders.php">Daily Reminders</a>
         </li>
                 <li class="nav-item">
-          <a class="nav-link" href="AssignmentTracker.php">Assignment Tracker</a>
+          <a class="nav-link" href="assignmentracker.php">Assignment Tracker</a>
         </li>
       </ul>
     </div>
