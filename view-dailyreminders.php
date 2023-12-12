@@ -13,7 +13,7 @@
 
     <tbody>
       <?php
-        while($dailyremindersf = $dailyreminders->fetchassoc()){
+        while($dailyremindersf = $dailyreminders->fetch_assoc()){
       ?>
           <tr>
               <td><?php echo $dailyremindersf['ReminderID']; ?></td>
