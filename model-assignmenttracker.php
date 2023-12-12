@@ -2,7 +2,7 @@
 function selectAssignmenttracker() {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT AssignmentID, AssignmentName,CourseName, DueDate, Status FROM `AssignmentTracker`");
+        $stmt = $conn->prepare("SELECT AssignmentID, AssignmentName, CourseName, DueDate, Status FROM `AssignmentTracker`");
         $stmt->execute();
         $result = $stmt->get_result();
         $conn->close();
@@ -13,11 +13,11 @@ function selectAssignmenttracker() {
     }
 }
 
-function insertAssignmenttracker($tdln, $tdlp, $tdld, $tdls) {
+function insertAssignmenttracker($tdln, $tdlc, $tdld, $tdls) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("INSERT INTO `ToDoList` (TaskName, Priority, DueDate, Status) VALUES (?, ?, ?, ?)");
-        $stmt->bind_param("ssss", $tdln, $tdlp, $tdld, $tdls);
+        $stmt = $conn->prepare("INSERT INTO `AssignmentTracker` (AssignmentName, CourseName, DueDate, Status) VALUES (?, ?, ?, ?)");
+        $stmt->bind_param("ssss", $tdln, $tdlc, $tdld, $tdls);
         $success = $stmt->execute();
         $conn->close();
         return $success;
@@ -27,11 +27,11 @@ function insertAssignmenttracker($tdln, $tdlp, $tdld, $tdls) {
     }
 }
 
-function updateAssignmenttracker($tdln, $tdlp, $tdld, $tdls, $tdli) {
+function updateAssignmenttracker($tdln, $tdlc, $tdld, $tdls, $tdli) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("update `ToDoList` set `TaskName`=?, `Priority`=?, `DueDate`=?, `Status`=? where `TaskID` = ?");
-        $stmt->bind_param("ssssi", $tdln, $tdlp, $tdld, $tdls, $tdli);
+        $stmt = $conn->prepare("UPDATE `AssignmentTracker` SET `AssignmentName`=?, `CourseName`=?, `DueDate`=?, `Status`=? WHERE `AssignmentID` = ?");
+        $stmt->bind_param("ssssi", $tdln, $tdlc, $tdld, $tdls, $tdli);
         $success = $stmt->execute();
         $conn->close();
         return $success;
@@ -44,7 +44,7 @@ function updateAssignmenttracker($tdln, $tdlp, $tdld, $tdls, $tdli) {
 function deleteAssignmenttracker($tdli) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("delete from `ToDoList` where TaskID = ? ");
+        $stmt = $conn->prepare("DELETE FROM `AssignmentTracker` WHERE AssignmentID = ?");
         $stmt->bind_param("i", $tdli);
         $success = $stmt->execute();
         $conn->close(); 
