@@ -16,8 +16,8 @@ function selectShoppinglist() {
 function insertShoppinglist($tdln, $tdlp, $tdld, $tdls) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("INSERT INTO `ToDoList` (TaskName, Priority, DueDate, Status) VALUES (?, ?, ?, ?)");
-        $stmt->bind_param("ssss", $tdln, $tdlp, $tdld, $tdls);
+        $stmt = $conn->prepare("INSERT INTO `ShoppingList` (ItemName, Quantity, Category, Purchased) VALUES (?, ?, ?, ?)");
+        $stmt->bind_param("siss", $tdln, $tdlp, $tdld, $tdls);
         $success = $stmt->execute();
         $conn->close();
         return $success;
@@ -30,8 +30,8 @@ function insertShoppinglist($tdln, $tdlp, $tdld, $tdls) {
 function updateShoppinglist($tdln, $tdlp, $tdld, $tdls, $tdli) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("update `ToDoList` set `TaskName`=?, `Priority`=?, `DueDate`=?, `Status`=? where `TaskID` = ?");
-        $stmt->bind_param("ssssi", $tdln, $tdlp, $tdld, $tdls, $tdli);
+        $stmt = $conn->prepare("update `ShoppingList` set `ItemName`=?, `Quantity`=?, `Category`=?, `Purchased`=? where `ItemID` = ?");
+        $stmt->bind_param("sissi", $tdln, $tdlp, $tdld, $tdls, $tdli);
         $success = $stmt->execute();
         $conn->close();
         return $success;
@@ -44,7 +44,7 @@ function updateShoppinglist($tdln, $tdlp, $tdld, $tdls, $tdli) {
 function deleteShoppinglist($tdli) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("delete from `ToDoList` where TaskID = ? ");
+        $stmt = $conn->prepare("delete from `ShoppingList` where TaskID = ? ");
         $stmt->bind_param("i", $tdli);
         $success = $stmt->execute();
         $conn->close(); 
