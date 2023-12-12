@@ -14,6 +14,7 @@
     <tbody>
       <?php
         while($dailyremindersf = $dailyreminders->fetchassoc()){
+      ?>
           <tr>
               <td><?php echo $dailyremindersf['ReminderID']; ?></td>
               <td><?php echo $dailyremindersf['ReminderText']; ?></td>
