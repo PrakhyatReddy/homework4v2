@@ -1,5 +1,5 @@
 <?php
-function selectShoppingList() {
+function selectShoppinglist() {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("SELECT * FROM `ShoppingList`");
