@@ -5,6 +5,7 @@ function selectShoppinglist() {
         $stmt = $conn->prepare("SELECT * FROM `ShoppingList`");
         $stmt->execute();
         $result = $stmt->get_result();
+        var_dump($result);
         $conn->close();
         return $result;
     } catch (Exception $e) {
