@@ -1,4 +1,4 @@
-<h1>Welcome to your To Do List</h1>
+<h1>Welcome to your Daily Reminders</h1>
 
 <div class="table-responsive">
   <table class="table">
