@@ -8,8 +8,6 @@
         <th>Quantity</th>
         <th>Category</th>
         <th>Purchase Status</th>
-        <th></th>
-        <th></th>
       </tr>
     </thead>
 
