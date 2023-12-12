@@ -4,7 +4,7 @@
   </div>
   <div class="col-auto">
       <?php
-        include "view-todolist-newform.php";
+        include "view-dailyreminders-newform.php";
       ?>
   </div>
 </div>
@@ -13,11 +13,10 @@
   <table class="table">
     <thead>
       <tr>
-        <th>Task ID</th>
-        <th>Task Name</th>
-        <th>Priority</th>
-        <th>Due Date</th>
-        <th>Status</th>
+        <th>Reminder ID</th>
+        <th>Reminder</th>
+        <th>Time</th>
+        <th>Recurring</th>
         <th></th>
         <th></th>
       </tr>
@@ -25,17 +24,16 @@
 
     <tbody>
       <?php
-        while ($todolistf =$todolist->fetch_assoc()){
+        while ($dailyremindersf =$dailyreminders->fetch_assoc()){
       ?>
           <tr>
-              <td><?php echo $todolistf['TaskID']; ?></td>
-              <td><?php echo $todolistf['TaskName']; ?></td>
-              <td><?php echo $todolistf['Priority']; ?></td>
-              <td><?php echo $todolistf['DueDate']; ?></td>
-              <td><?php echo $todolistf['Status']; ?></td>
+              <td><?php echo $dailyremindersf['ReminderID']; ?></td>
+              <td><?php echo $dailyremindersf['ReminderText']; ?></td>
+              <td><?php echo $dailyremindersf['ReminderTime']; ?></td>
+              <td><?php echo $dailyremindersf['Recurring']; ?></td>
               <td>
                 <?php
-                 include "view-todolist-editform.php";
+                 include "view-dailyreminders-editform.php";
                 ?>
               </td>
               <td>
