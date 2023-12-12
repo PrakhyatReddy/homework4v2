@@ -2,7 +2,7 @@
 function selectDailyreminders() {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT ReminderID, ReminderText, ReminderTime, Recurring FROM `DailyReminders` ");
+        $stmt = $conn->prepare("SELECT ReminderID, ReminderText, ReminderTime, Recurring FROM `DailyReminders`");
         $stmt->execute();
         $result = $stmt->get_result();
         $conn->close();
@@ -13,11 +13,11 @@ function selectDailyreminders() {
     }
 }
 
-function insertDailyreminders($tdln, $tdlp, $tdld, $tdls) {
+function insertDailyreminders($tdln, $tdlp, $tdld) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("INSERT INTO `ToDoList` (TaskName, Priority, DueDate, Status) VALUES (?, ?, ?, ?)");
-        $stmt->bind_param("ssss", $tdln, $tdlp, $tdld, $tdls);
+        $stmt = $conn->prepare("INSERT INTO `DailyReminders` (ReminderText, ReminderTime, Recurring) VALUES (?, ?, ?)");
+        $stmt->bind_param("sss", $tdln, $tdlp, $tdld);
         $success = $stmt->execute();
         $conn->close();
         return $success;
@@ -27,11 +27,11 @@ function insertDailyreminders($tdln, $tdlp, $tdld, $tdls) {
     }
 }
 
-function updateDailyreminders($tdln, $tdlp, $tdld, $tdls, $tdli) {
+function updateDailyreminders($tdln, $tdlp, $tdld, $tdli) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("update `ToDoList` set `TaskName`=?, `Priority`=?, `DueDate`=?, `Status`=? where `TaskID` = ?");
-        $stmt->bind_param("ssssi", $tdln, $tdlp, $tdld, $tdls, $tdli);
+        $stmt = $conn->prepare("UPDATE `DailyReminders` SET `ReminderText`=?, `ReminderTime`=?, `Recurring`=? WHERE `ReminderID` = ?");
+        $stmt->bind_param("sssi", $tdln, $tdlp, $tdld, $tdli);
         $success = $stmt->execute();
         $conn->close();
         return $success;
@@ -44,7 +44,7 @@ function updateDailyreminders($tdln, $tdlp, $tdld, $tdls, $tdli) {
 function deleteDailyreminders($tdli) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("delete from `ToDoList` where TaskID = ? ");
+        $stmt = $conn->prepare("DELETE FROM `DailyReminders` WHERE ReminderID = ?");
         $stmt->bind_param("i", $tdli);
         $success = $stmt->execute();
         $conn->close(); 
@@ -55,3 +55,4 @@ function deleteDailyreminders($tdli) {
     }
 }
 ?>
+
