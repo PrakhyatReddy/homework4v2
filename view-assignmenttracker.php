@@ -1,4 +1,4 @@
-<h1>AssignmentTracker</h1>
+<h1>Welcome to your Assignment Tracker</h1>
 
 <div class="table-responsive">
   <table class="table">
