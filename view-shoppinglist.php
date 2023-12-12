@@ -28,11 +28,11 @@
         while ($shoppinglistf =$shoppinglist->fetch_assoc()){
       ?>
           <tr>
-              <td><?php echo $todolistf['ItemID']; ?></td>
-              <td><?php echo $todolistf['ItemName']; ?></td>
-              <td><?php echo $todolistf['Quantity']; ?></td>
-              <td><?php echo $todolistf['Category']; ?></td>
-              <td><?php echo $todolistf['Purchased']; ?></td>
+              <td><?php echo $shoppinglistf['ItemID']; ?></td>
+              <td><?php echo $shoppinglistf['ItemName']; ?></td>
+              <td><?php echo $shoppinglistf['Quantity']; ?></td>
+              <td><?php echo $shoppinglistf['Category']; ?></td>
+              <td><?php echo $shoppinglistf['Purchased']; ?></td>
               <td>
                 <?php
                  include "view-shoppinglist-editform.php";
