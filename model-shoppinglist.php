@@ -5,7 +5,6 @@ function selectShoppinglist() {
         $stmt = $conn->prepare("SELECT ItemID, ItemID, Quantity, Category, Purchased  FROM `ShoppingList`");
         $stmt->execute();
         $result = $stmt->get_result();
-        var_dump($result);
         $conn->close();
         return $result;
     } catch (Exception $e) {
@@ -13,7 +12,6 @@ function selectShoppinglist() {
         throw $e;
     }
 }
-
 ?>
 
 
