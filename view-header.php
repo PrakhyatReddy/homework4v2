@@ -23,7 +23,7 @@
           <a class="nav-link" href="todolist.php">To Do List</a>
         </li>
                 <li class="nav-item">
-          <a class="nav-link" href="dailyreminders.php">Shopping List</a>
+          <a class="nav-link" href="shoppinglist.php">Shopping List</a>
         </li>
                 <li class="nav-item">
           <a class="nav-link" href="dailyreminders.php">Daily Reminders</a>
