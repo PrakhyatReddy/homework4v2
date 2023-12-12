@@ -1,23 +1,3 @@
-<h1>Welcome to your Assignment Tracker</h1>
-
-<div class="table-responsive">
-  <table class="table">
-    <thead>
-      <tr>
-
-      </tr>
-    </thead>
-
-
-          </tr>
-      <?php
-        }
-      ?>
-    </tbody>
-  </table>
-</div>
-
-
 <div class="row">
   <div class="col">
     <h1>Welcome to your Assignment Tracker</h1>
