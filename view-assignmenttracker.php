@@ -4,7 +4,7 @@
   </div>
   <div class="col-auto">
       <?php
-        include "view-todolist-newform.php";
+        include "view-assignmenttracker-newform.php";
       ?>
   </div>
 </div>
@@ -13,9 +13,9 @@
   <table class="table">
     <thead>
       <tr>
-        <th>Task ID</th>
-        <th>Task Name</th>
-        <th>Priority</th>
+        <th>Assignment ID</th>
+        <th>Assignment</th>
+        <th>Course</th>
         <th>Due Date</th>
         <th>Status</th>
         <th></th>
@@ -25,17 +25,17 @@
 
     <tbody>
       <?php
-        while ($todolistf =$todolist->fetch_assoc()){
+        while ($assignmenttrackerf =$assignmenttracker->fetch_assoc()){
       ?>
           <tr>
-              <td><?php echo $todolistf['TaskID']; ?></td>
-              <td><?php echo $todolistf['TaskName']; ?></td>
-              <td><?php echo $todolistf['Priority']; ?></td>
-              <td><?php echo $todolistf['DueDate']; ?></td>
-              <td><?php echo $todolistf['Status']; ?></td>
+              <td><?php echo $assignmenttrackerf['AssignmentID']; ?></td>
+              <td><?php echo $assignmenttrackerf['AssignmentName']; ?></td>
+              <td><?php echo $assignmenttrackerf['CourseName']; ?></td>
+              <td><?php echo $assignmenttrackerf['DueDate']; ?></td>
+              <td><?php echo $assignmenttrackerf['Status']; ?></td>
               <td>
                 <?php
-                 include "view-todolist-editform.php";
+                 include "view-assignmenttracker-editform.php";
                 ?>
               </td>
               <td>
