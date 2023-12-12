@@ -4,7 +4,7 @@
   </div>
   <div class="col-auto">
       <?php
-        include "view-todolist-newform.php";
+        include "view-shoppinglist-newform.php";
       ?>
   </div>
 </div>
@@ -13,11 +13,11 @@
   <table class="table">
     <thead>
       <tr>
-        <th>Task ID</th>
-        <th>Task Name</th>
-        <th>Priority</th>
-        <th>Due Date</th>
-        <th>Status</th>
+        <th>Item ID</th>
+        <th>Item Name</th>
+        <th>Quantity</th>
+        <th>Category</th>
+        <th>Purchase Status</th>
         <th></th>
         <th></th>
       </tr>
@@ -25,17 +25,17 @@
 
     <tbody>
       <?php
-        while ($todolistf =$todolist->fetch_assoc()){
+        while ($shoppinglistf =$shoppinglist->fetch_assoc()){
       ?>
           <tr>
-              <td><?php echo $todolistf['TaskID']; ?></td>
-              <td><?php echo $todolistf['TaskName']; ?></td>
-              <td><?php echo $todolistf['Priority']; ?></td>
-              <td><?php echo $todolistf['DueDate']; ?></td>
-              <td><?php echo $todolistf['Status']; ?></td>
+              <td><?php echo $todolistf['ItemID']; ?></td>
+              <td><?php echo $todolistf['ItemName']; ?></td>
+              <td><?php echo $todolistf['Quantity']; ?></td>
+              <td><?php echo $todolistf['Category']; ?></td>
+              <td><?php echo $todolistf['Purchased']; ?></td>
               <td>
                 <?php
-                 include "view-todolist-editform.php";
+                 include "view-shoppinglist-editform.php";
                 ?>
               </td>
               <td>
