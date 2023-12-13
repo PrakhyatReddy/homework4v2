@@ -16,7 +16,7 @@ if (isset($_POST['actionType'])){
     break;
 
     case "Delete":
-    if (deleteDailyreminders($_POST['ReminderID'])){
+    if (deleteDailyreminders($_POST['tdli'])){
       echo '<div class="alert alert-success" role="alert"> Reminder Deleted! </div>';
     } else {
       echo '<div class="alert alert-danger" role="alert"> Error! </div>';
