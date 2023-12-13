@@ -15,6 +15,14 @@ if (isset($_POST['actionType'])){
     }
     break;
 
+    case "Edit":
+    if (updateDailyreminders($_POST['ReminderText'], $_POST['ReminderTime'], $_POST['Recurring'], $_POST['tdli'])){
+      echo '<div class="alert alert-success" role="alert"> Reminder Edited! </div>';
+    } else {
+      echo '<div class="alert alert-danger" role="alert"> Error! </div>';
+    }
+    break;
+
     case "Delete":
     if (deleteDailyreminders($_POST['tdli'])){
       echo '<div class="alert alert-success" role="alert"> Reminder Deleted! </div>';
