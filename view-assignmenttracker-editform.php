@@ -34,7 +34,7 @@
             <input type="text" class="form-control" id="Status<?php echo $assignmenttrackerf['AssignmentID']; ?>" name="Status" value="<?php echo $assignmenttrackerf['Status']; ?>">
           </div>
           
-          <input type="hidden" name="assignmentID" value="<?php echo $assignmenttrackerf['AssignmentID']; ?>">
+          <input type="hidden" name="tdli" value="<?php echo $assignmenttrackerf['AssignmentID']; ?>">
           <input type="hidden" name="actionType" value="Edit">
           <button type="submit" class="btn btn-primary">Save</button>
         </form>
