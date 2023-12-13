@@ -9,7 +9,15 @@ if (isset($_POST['actionType'])){
   switch ($_POST['actionType']){
     case "Add":
     if (insertShoppinglist($_POST['ItemName'], $_POST['Quantity'], $_POST['Category'], $_POST['Purchased'])){
-      echo '<div class="alert alert-success" role="alert"> Task Added! </div>';
+      echo '<div class="alert alert-success" role="alert"> Item Added! </div>';
+    } else {
+      echo '<div class="alert alert-danger" role="alert"> Error! </div>';
+    }
+    break;
+
+    case "Delete":
+    if (deleteShoppinglist($_POST['ItemID'])){
+      echo '<div class="alert alert-success" role="alert"> Item Deleted! </div>';
     } else {
       echo '<div class="alert alert-danger" role="alert"> Error! </div>';
     }
