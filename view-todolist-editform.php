@@ -34,7 +34,7 @@
       <input type="text" class="form-control" id="Status<?php echo $todolistf['TaskID']; ?>" name="Status" value="<?php echo $todolistf['Status']; ?>">
     </div>
         
-   < input type="hidden" name="tdli" value="<?php echo $todolistf['TaskID']; ?>">
+    <input type="hidden" name="tdli" value="<?php echo $todolistf['TaskID']; ?>">
     <input type="hidden" name="actionType" value="Edit">
     <button type="submit" class="btn btn-primary">Save</button>
 </form>
