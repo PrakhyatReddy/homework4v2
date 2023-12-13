@@ -18,16 +18,16 @@
         
         <form method="post" action="">
           <div class="mb-3">
-            <label for="ReminderText" class="form-label">Reminder Text</label>
-            <input type="text" class="form-control" id="ReminderText" name="ReminderText">
+            <label for="tdln" class="form-label">Reminder Text</label>
+            <input type="text" class="form-control" id="tdln" name="ReminderText">
           </div>
           <div class="mb-3">
-            <label for="ReminderTime" class="form-label">Reminder Time</label>
-            <input type="text" class="form-control" id="ReminderTime" name="ReminderTime">
+            <label for="tdlp" class="form-label">Reminder Time</label>
+            <input type="text" class="form-control" id="tdlp" name="ReminderTime">
           </div>
           <div class="mb-3">
-            <label for="Recurring" class="form-label">Recurring</label>
-            <input type="text" class="form-control" id="Recurring" name="Recurring">
+            <label for="tdld" class="form-label">Recurring</label>
+            <input type="text" class="form-control" id="tdld" name="Recurring">
           </div>
 
           <input type="hidden" name="actionType" value="Add">
