@@ -30,7 +30,7 @@
             <input type="text" class="form-control" id="Recurring<?php echo $dailyreminderf['ReminderID']; ?>" name="Recurring" value="<?php echo $dailyreminderf['Recurring']; ?>">
           </div>
           
-          <input type="hidden" name="reminderID" value="<?php echo $dailyreminderf['ReminderID']; ?>">
+          <input type="hidden" name="tdli" value="<?php echo $dailyreminderf['ReminderID']; ?>">
           <input type="hidden" name="actionType" value="Edit">
           <button type="submit" class="btn btn-primary">Save</button>
         </form>
