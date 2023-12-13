@@ -30,7 +30,7 @@ function insertTodolist($tdln, $tdlp, $tdld, $tdls) {
 function updateTodolist($tdln, $tdlp, $tdld, $tdls, $tdli) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("update `ToDoList` set `TaskName`=?, `Priority`=?, `DueDate`= STR_TO_DATE(?, '%Y-%m-%d'), `Status`=? where `TaskID` = ?");
+        $stmt = $conn->prepare("UPDATE `ToDoList` SET `TaskName` = ? ,`Priority` = ?, `DueDate` = ?, `Status` = ? WHERE `TaskID` = ?;");
         $stmt->bind_param("ssssi", $tdln, $tdlp, $tdld, $tdls, $tdli);
         $success = $stmt->execute();
         $conn->close();
