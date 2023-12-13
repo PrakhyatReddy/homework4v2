@@ -18,20 +18,20 @@
         
         <form method="post" action="">
           <div class="mb-3">
-            <label for="AssignmentName" class="form-label">Assignment Name</label>
-            <input type="text" class="form-control" id="AssignmentName" name="AssignmentName">
+            <label for="tdln" class="form-label">Assignment Name</label>
+            <input type="text" class="form-control" id="tdln" name="AssignmentName">
           </div>
           <div class="mb-3">
-            <label for="CourseName" class="form-label">Course Name</label>
-            <input type="text" class="form-control" id="CourseName" name="CourseName">
+            <label for="tdlc" class="form-label">Course Name</label>
+            <input type="text" class="form-control" id="tdlc" name="CourseName">
           </div>
           <div class="mb-3">
-            <label for="DueDate" class="form-label">Due Date</label>
-            <input type="text" class="form-control" id="DueDate" name="DueDate">
+            <label for="tdld" class="form-label">Due Date</label>
+            <input type="text" class="form-control" id="tdld" name="DueDate">
           </div>
           <div class="mb-3">
-            <label for="Status" class="form-label">Status</label>
-            <input type="text" class="form-control" id="Status" name="Status">
+            <label for="tdls" class="form-label">Status</label>
+            <input type="text" class="form-control" id="tdls" name="Status">
           </div>
 
           <input type="hidden" name="actionType" value="Add">
