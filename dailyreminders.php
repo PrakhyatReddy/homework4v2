@@ -9,7 +9,15 @@ if (isset($_POST['actionType'])){
   switch ($_POST['actionType']){
     case "Add":
     if (insertDailyreminders($_POST['ReminderText'], $_POST['ReminderTime'], $_POST['Recurring'])){
-      echo '<div class="alert alert-success" role="alert"> Task Added! </div>';
+      echo '<div class="alert alert-success" role="alert"> Reminder Added! </div>';
+    } else {
+      echo '<div class="alert alert-danger" role="alert"> Error! </div>';
+    }
+    break;
+
+    case "Delete":
+    if (deleteDailyreminders($_POST['ReminderID'])){
+      echo '<div class="alert alert-success" role="alert"> Reminder Deleted! </div>';
     } else {
       echo '<div class="alert alert-danger" role="alert"> Error! </div>';
     }
