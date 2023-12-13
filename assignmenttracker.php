@@ -15,6 +15,14 @@ if (isset($_POST['actionType'])){
     }
     break;
 
+    case "Edit":
+    if (updateAssignmenttracker($_POST['AssignmentName'], $_POST['CourseName'], $_POST['DueDate'], $_POST['Status'], $_POST['tdli'])){
+      echo '<div class="alert alert-success" role="alert"> Assignment Edited! </div>';
+    } else {
+      echo '<div class="alert alert-danger" role="alert"> Error! </div>';
+    }
+    break;
+
     case "Delete":
     if (deleteAssignmenttracker($_POST['tdli'])){
       echo '<div class="alert alert-success" role="alert"> Assignment Deleted! </div>';
