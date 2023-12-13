@@ -16,7 +16,7 @@ if (isset($_POST['actionType'])){
     break;
 
     case "Delete":
-    if (deleteShoppinglist($_POST['ItemID'])){
+    if (deleteShoppinglist($_POST['tdli'])){
       echo '<div class="alert alert-success" role="alert"> Item Deleted! </div>';
     } else {
       echo '<div class="alert alert-danger" role="alert"> Error! </div>';
