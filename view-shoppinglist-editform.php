@@ -34,7 +34,7 @@
             <input type="text" class="form-control" id="Purchased<?php echo $shoppinglistf['ItemID']; ?>" name="Purchased" value="<?php echo $shoppinglistf['Purchased']; ?>">
           </div>
           
-          <input type="hidden" name="itemID" value="<?php echo $shoppinglistf['ItemID']; ?>">
+          <input type="hidden" name="tdli" value="<?php echo $shoppinglistf['ItemID']; ?>">
           <input type="hidden" name="actionType" value="Edit">
           <button type="submit" class="btn btn-primary">Save</button>
         </form>
