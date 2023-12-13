@@ -44,7 +44,7 @@ function updateShoppinglist($tdln, $tdlp, $tdld, $tdls, $tdli) {
 function deleteShoppinglist($tdli) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("delete from `ShoppingList` where TaskID = ? ");
+        $stmt = $conn->prepare("delete from `ShoppingList` where ItemID = ? ");
         $stmt->bind_param("i", $tdli);
         $success = $stmt->execute();
         $conn->close(); 
