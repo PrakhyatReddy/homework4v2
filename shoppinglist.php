@@ -15,6 +15,14 @@ if (isset($_POST['actionType'])){
     }
     break;
 
+    case "Edit":
+    if (updateShoppinglist($_POST['ItemName'], $_POST['Quantity'], $_POST['Category'], $_POST['Purchased'], $_POST['tdli'])){
+      echo '<div class="alert alert-success" role="alert"> Item Edited! </div>';
+    } else {
+      echo '<div class="alert alert-danger" role="alert"> Error! </div>';
+    }
+    break;
+
     case "Delete":
     if (deleteShoppinglist($_POST['tdli'])){
       echo '<div class="alert alert-success" role="alert"> Item Deleted! </div>';
